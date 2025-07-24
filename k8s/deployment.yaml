@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-demo
+  template:
+    metadata:
+      labels:
+        app: springboot-demo
+    spec:
+      containers:
+        - name: springboot-demo
+          image: springboot-demo:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
