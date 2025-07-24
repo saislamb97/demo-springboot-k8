@@ -1,5 +1,11 @@
-HELP.md
+### Java build output ###
 target/
+!target/*.jar
+
+# Explicitly ignore tar files
+*.tar
+
+### Maven ###
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
